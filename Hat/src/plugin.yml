@@ -1,0 +1,5 @@
+  name: Hat
+  version: 1.0
+  author: DarkerInk
+  api-version: 1.16
+  main: com.darkerink.hat.Hat
